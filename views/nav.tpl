@@ -12,7 +12,15 @@
                 <span class="btn btn-default">Go</span>
             </form>
         </li>
-        <li class="active"><a href="#"><i class="fa fa-home"></i>Dashboard</a></li>
+        <li><a href="#"><i class="fa fa-home"></i>主页</a></li>
+        <li class="sub">
+            <a href="javascript:;">
+                <i class="fa fa-cubes"></i>服务管理<div class="pull-right"><span class="caret"></span></div>
+            </a>
+            <ul class="templatemo-submenu">
+                <li><a href="#">同步器管理</a></li>
+            </ul>
+        </li>
     </ul>
 </div><!--/.navbar-collapse -->
 {{end}}
