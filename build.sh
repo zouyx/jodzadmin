@@ -4,13 +4,7 @@ fileName="package.properties"
 
 build(){
     read -p "enter your GOPATH(no enter will use parent path of src): " goPath
-    echo "==============Set path=============="
-    if [ -n "$goPath" ]; then
-        export GOPATH=$goPath
-    else
-        currentPath=`pwd`
-        export GOPATH=${currentPath%src*}
-    fi
+    setEnv
 
     echo "installing package!"
 
@@ -21,6 +15,7 @@ build(){
 
 reimport() {
     echo "==============import=============="
+    setEnv
     echo "Current GOPATH :"
     echo $GOPATH
 
@@ -29,6 +24,16 @@ reimport() {
         echo "installing $line!"
         gopm get "$line" -v -g
     done
+}
+
+setEnv(){
+    echo "==============Set path=============="
+    if [ -n "$goPath" ]; then
+        export GOPATH=$goPath
+    else
+        currentPath=`pwd`
+        export GOPATH=${currentPath%src*}
+    fi
 }
 
 case "$1" in

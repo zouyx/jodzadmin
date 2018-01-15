@@ -18,7 +18,7 @@
                 <i class="fa fa-cubes"></i>服务管理<div class="pull-right"><span class="caret"></span></div>
             </a>
             <ul class="templatemo-submenu">
-                <li><a href="#">同步器管理</a></li>
+                <li><a href="/management/synchronizer">同步器管理</a></li>
             </ul>
         </li>
     </ul>
